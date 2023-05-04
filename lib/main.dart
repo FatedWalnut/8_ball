@@ -6,7 +6,7 @@ void main() {
     home: Scaffold(
       backgroundColor: Colors.blue[900],
       appBar: AppBar(
-        title: Text("Me pergunte qualquer coisa(so respondo em ingles)",
+        title: const Text("Me pergunte qualquer coisa(so respondo em ingles)",
         style: TextStyle(
           fontFamily: 'Courier',
           fontSize: 20,
@@ -16,7 +16,7 @@ void main() {
 
         backgroundColor: Colors.blue[900],
       ),
-      body: MyApp(),
+      body: const MyApp(),
     ),
   ),
   );
@@ -31,7 +31,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int ball_number = 1;
+  int ballNumber = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -43,10 +43,10 @@ class _MyAppState extends State<MyApp> {
       TextButton(
         onPressed: () {
           setState(() {
-            ball_number = Random().nextInt(5) +1;
+            ballNumber = Random().nextInt(5) +1;
           });
         },child:
-      Image.asset('images/ball$ball_number.png'),),),
+      Image.asset('images/ball$ballNumber.png'),),),
     ],
     ),
     );
